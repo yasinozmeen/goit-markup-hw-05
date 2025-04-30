@@ -51,6 +51,52 @@
         </address>
       </div>
     </header>
+    <section class="modal">
+      <!-- "is-open" sınıfı ekleyince modal görünür oluyor-->
+      <div class="modal-box">
+        <button class="modal-close-button">
+          <img src="/images/close.svg" alt="" />
+        </button>
+        <p>Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <label class="modal-form-label">
+            Name
+            <input class="modal-form-input profil" type="text" />
+          </label>
+          <label class="modal-form-label">
+            Phone
+            <input class="modal-form-input phone" type="text" />
+          </label>
+
+          <label class="modal-form-label">
+            Email
+            <input class="modal-form-input mail" type="text" />
+          </label>
+          <label class="modal-form-label">
+            Comment
+            <textarea
+              class="modal-form-textarea"
+              name="Comment"
+              placeholder="Text input"
+              rows="5"
+            ></textarea>
+          </label>
+          <div class="pp-checkbox">
+            <input
+              type="checkbox"
+              name="answer"
+              value="approv"
+              id="pp-approv"
+            />
+            <label for="pp-approv">
+              I accept the terms and conditions of the
+              <span class="pp-span">Privacy Policy</span>
+            </label>
+          </div>
+        </form>
+        <button class="modal-send-form-button">Send</button>
+      </div>
+    </section>
     <main>
       <section class="section about">
         <div class="dark-bg">
@@ -339,6 +385,25 @@
           <div class="icons-bg">
             <img src="/images/linkedn.svg" alt="" width="16" height="16" />
           </div>
+        </div>
+      </div>
+      <div class="subscribe">
+        <div>
+          <form class="form" name="email-form">
+            <label>
+              Subscribe
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+              />
+            </label>
+            <button class="form-button" type="submit">
+              Subscribe
+              <img src="/images/send.svg" alt="" />
+            </button>
+          </form>
         </div>
       </div>
     </footer>
