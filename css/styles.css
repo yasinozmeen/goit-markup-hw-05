@@ -36,7 +36,6 @@ img {
 
 .container {
   max-width: 1158px;
-  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -409,17 +408,18 @@ img {
   letter-spacing: 0.02em;
 }
 
-.wish {
+.wish-bg {
   background-color: #2e2f42;
+}
+.wish {
   display: flex;
   flex-direction: row;
-  gap: 120px;
+  justify-content: space-between;
   align-items: center;
 }
 
 .wish-container {
   padding: 100px 0;
-  margin-left: 156px;
 }
 .social {
   display: flex;
