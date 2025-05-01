@@ -150,7 +150,7 @@ img {
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: #2e2f42;
-  background-image: url(/images/img11.jpg);
+  background-image: url(./images/img11.jpg);
   background-size: cover;
   background-blend-mode: soft-light;
 }
