@@ -530,6 +530,12 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.modal-close-button:hover {
+  background-color: #404bbf;
+}
+.modal-close-button:hover svg {
+  fill: white;
+}
 .modal-close-button svg {
   width: 8px;
   height: 8px;
@@ -573,7 +579,15 @@ img {
   line-height: 14px;
   letter-spacing: 4%;
   color: rgba(142, 143, 153, 1);
+  position: relative;
 }
+.modal-form-label svg {
+  position: absolute;
+  left: 12px;
+  top: 32px;
+  color: #404bbf;
+}
+
 .modal-form-input {
   width: 360px;
   height: 40px;
@@ -584,18 +598,11 @@ img {
   padding-left: 40px;
   background-size: 12px 12px;
 }
-.profil {
-  background: url(../images/profil.svg) no-repeat 17.5px center;
-}
-.mail {
-  background: url(../images/mail.svg) no-repeat 17.5px center;
-}
-.phone {
-  background: url(../images/phone.svg) no-repeat 17.5px center;
-}
 .modal-form-input:focus {
   border-color: rgba(77, 90, 229, 1);
-  color: rgba(77, 90, 229, 1);
+}
+.modal-form-input:focus + svg {
+  fill: rgba(77, 90, 229, 1);
 }
 .modal-form-textarea {
   padding-left: 16px;
@@ -616,14 +623,38 @@ img {
 .pp-checkbox {
   display: flex;
   gap: 8px;
+  cursor: pointer;
+  align-items: center;
 }
 .pp-checkbox label {
-  font-family: Roboto;
-  font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 4%;
   color: rgba(117, 117, 117, 1);
+  cursor: pointer;
+}
+.checkbox {
+  display: none;
+}
+.pp-checkbox .pp-label {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+.checkbox:checked + .pp-label {
+  background-color: #404bbf;
+  border-color: #404bbf;
+}
+.checkbox:checked + .pp-label::after {
+  content: "✓";
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  color: #fff;
+  font-weight: 500;
 }
 .pp-span {
   font-family: Roboto;
@@ -656,6 +687,10 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+.modal-send-form-button:hover {
+  background-color: rgba(64, 75, 191, 1);
 }
 *:hover {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
